@@ -1,0 +1,39 @@
+﻿@using WCF.Demo.ServiceReference;
+@model IEnumerable<Member_Get_Result>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="table-responsive">
+    <table class="table">
+        <tr>
+            <th>姓名</th>
+            <th>電話</th>
+            <th>新增人</th>
+            <th>修改人</th>
+            <th>修改時間</th>
+            <th>狀態碼</th>
+            <th>狀態</th>
+            <th>編輯</th>
+            <th>刪除</th>
+        </tr>
+
+        @foreach (var member in Model)
+        {
+            <tr>
+                <td>@member.Name</td>
+                <td>@member.Phone</td>
+                <td>@member.CreateAccount</td>
+                <td>@member.CreateDate</td>
+                <td>@member.ModifyAccount</td>
+                <td>@member.ModifyDate</td>
+                <td>@member.Flag</td>
+                <td><a href="@Url.Action("Update","CRUD")?No=@member.No">修改</a> </td>
+                <td><a href="@Url.Action("Delete","CRUD")?No=@member.No">刪除</a> </td>
+            </tr>
+        }
+    </table>
+</div>

@@ -1,0 +1,34 @@
+﻿@using WCF.Demo.ServiceReference
+@model Member_GetByNo_Result
+@{
+    ViewBag.Title = "GetByNo";
+}
+
+<h2>GetByNo</h2>
+@Html.LabelFor(x => x.No)
+
+@Html.LabelFor(x=>x.Name)
+@Html.TextBoxFor(x=>x.Name)
+
+@Html.LabelFor(x => x.Phone)
+@Html.TextBoxFor(x => x.Phone)
+
+
+@Html.LabelFor(x => x.CreateAccount)
+@Html.TextBoxFor(x => x.CreateAccount)
+
+@Html.LabelFor(x => x.CreateDate)
+@Html.TextBoxFor(x => x.CreateDate)
+
+
+@Html.LabelFor(x => x.ModifyAccount)
+@Html.TextBoxFor(x => x.ModifyAccount)
+
+
+@Html.LabelFor(x => x.ModifyDate)
+@Html.TextBoxFor(x => x.ModifyDate)
+
+
+@Html.LabelFor(x => x.Flag)
+@Html.TextBoxFor(x => x.Flag)
+

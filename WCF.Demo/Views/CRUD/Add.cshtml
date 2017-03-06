@@ -1,0 +1,28 @@
+﻿@using WCF.Demo.ServiceReference
+@model Member
+
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+
+
+<form method="post">
+    @Html.LabelFor(x => x.Name)
+    @Html.TextBoxFor(x => x.Name)
+    <br />
+    @Html.LabelFor(x => x.Phone)
+    @Html.TextBoxFor(x => x.Phone)
+    <br />
+    @Html.LabelFor(x => x.CreateAccount)
+    @Html.TextBoxFor(x => x.CreateAccount)
+    <br />
+    @Html.LabelFor(x => x.ModifyAccount)
+    @Html.TextBoxFor(x => x.ModifyAccount)
+    <br />
+    @Html.LabelFor(x => x.Flag)
+    @Html.TextBoxFor(x => x.Flag)
+
+    <input type="submit" value="送出" />
+</form>
